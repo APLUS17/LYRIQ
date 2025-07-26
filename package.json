@@ -1,5 +1,5 @@
 {
-	"name": "expo-supabase-starter",
+	"name": "lyriq",
 	"version": "1.0.0",
 	"main": "expo-router/entry",
 	"scripts": {
@@ -45,7 +45,12 @@
 		"react-native-web": "^0.20.0",
 		"tailwind-merge": "^3.2.0",
 		"tailwindcss": "~3.4.17",
-		"zod": "^3.24.3"
+		"zod": "^3.24.3",
+		"expo-av": "~15.0.1",
+		"expo-file-system": "~18.0.4",
+		"expo-haptics": "~14.0.0",
+		"expo-media-library": "~17.1.1",
+		"react-native-svg": "15.9.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.20.0",

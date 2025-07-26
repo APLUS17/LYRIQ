@@ -1,14 +1,55 @@
-# Expo Supabase Starter
+# LYRIQ 🎵
 
-![social-preview-dark](https://github.com/user-attachments/assets/9697a7da-10aa-4661-bb76-b5bc0dd611f0)
+*A minimalist, emotion-first songwriting companion for modern artists*
 
-## Introduction
+## Vision
 
-This repository serves as a comprehensive starter project for developing React Native and Expo applications with Supabase as the backend. It integrates various technologies such as Expo Router for navigation, Tailwind CSS for styling, React-Hook-Form for form handling, Zod for schema validation, and TypeScript for type safety. By leveraging these powerful tools, this starter template provides a robust foundation for building modern, scalable, and efficient mobile applications.
+LYRIQ transforms the songwriting process into an intuitive, mobile-native experience. Built for thumb typing, voice capture, and AI-enhanced creativity, LYRIQ removes barriers between inspiration and creation.
 
-#### Disclaimer
+### Core Philosophy
+- **Simplicity First**: Clean, distraction-free interface like Apple Notes
+- **Mobile-Native**: Optimized for quick ideation and voice capture
+- **AI-Enhanced**: Intelligent assistance without overwhelming creativity
+- **Emotion-Driven**: Tools that respond to mood and creative flow
 
-This is not supposed to be a template, boilerplate or a framework. It is an opinionated guide that shows how to do some things in a certain way. You are not forced to do everything exactly as it is shown here, decide what works best for you and your team and stay consistent with your style.
+## Features
+
+### 📝 **WRITER**
+Minimalist lyric editor with collapsible song sections
+- Verse, Chorus, Bridge, Outro organization
+- Auto-save and real-time sync
+- Mobile-optimized text editing
+- Swipe gestures for section reordering
+
+### 🎤 **MUMBL** 
+Voice capture engine for instant audio ideas
+- One-tap recording with visual feedback
+- Voice memo organization
+- Audio waveform visualization
+- Background processing and storage
+
+### 🤖 **MUSE**
+AI assistant powered by Claude API
+- Context-aware songwriting suggestions
+- Mood-based creative prompts
+- Rhyme and flow recommendations
+- Real-time collaboration with AI
+
+### 📂 **Projects**
+Song organization and session tracking
+- Project-based workflow
+- Creative session history
+- Collaboration tools
+- Export and sharing options
+
+## Technical Foundation
+
+Built on a robust React Native + Supabase foundation with modern tooling:
+- **Frontend**: React Native + TypeScript + NativeWind
+- **Backend**: Supabase (database + auth + storage)
+- **AI**: Claude API integration
+- **Audio**: React Native audio libraries
+- **Navigation**: Expo Router
 
 ## Table of Contents
 

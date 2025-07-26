@@ -6,44 +6,56 @@
 export const colors = {
 	light: {
 		background: "hsl(0, 0%, 100%)",
-		foreground: "hsl(0, 0%, 14.50%)",
-		card: "hsl(0, 0%, 100%)",
-		cardForeground: "hsl(0, 0%, 14.50%)",
+		foreground: "hsl(0, 0%, 10%)",
+		card: "hsl(0, 0%, 98%)",
+		cardForeground: "hsl(0, 0%, 10%)",
 		popover: "hsl(0, 0%, 100%)",
-		popoverForeground: "hsl(0, 0%, 14.50%)",
-		primary: "hsl(0, 0%, 20.50%)",
-		primaryForeground: "hsl(0, 0%, 98.50%)",
-		secondary: "hsl(0, 0%, 97%)",
-		secondaryForeground: "hsl(0, 0%, 20.50%)",
-		muted: "hsl(0, 0%, 97%)",
-		mutedForeground: "hsl(0, 0%, 55.60%)",
-		accent: "hsl(0, 0%, 97%)",
-		accentForeground: "hsl(0, 0%, 20.50%)",
+		popoverForeground: "hsl(0, 0%, 10%)",
+		primary: "hsl(217, 91%, 60%)", // LYRIQ Blue #3b82f6
+		primaryForeground: "hsl(0, 0%, 100%)",
+		secondary: "hsl(220, 14%, 42%)", // LYRIQ Secondary #6b7280
+		secondaryForeground: "hsl(0, 0%, 100%)",
+		muted: "hsl(220, 13%, 97%)", // Background Light #f9fafb
+		mutedForeground: "hsl(220, 14%, 42%)",
+		accent: "hsl(158, 64%, 52%)", // LYRIQ Green #10b981
+		accentForeground: "hsl(0, 0%, 100%)",
 		destructive: "hsl(0, 80%, 57.70%)",
 		destructiveForeground: "hsl(0, 0%, 100%)",
 		border: "hsl(0, 0%, 92.20%)",
 		input: "hsl(0, 0%, 92.20%)",
-		ring: "hsl(0, 0%, 70.80%)",
+		ring: "hsl(217, 91%, 60%)",
+		// LYRIQ-specific colors
+		lyricEditor: "hsl(0, 0%, 100%)",
+		recordingActive: "hsl(0, 100%, 50%)", // Recording red
+		recordingPulse: "hsl(0, 100%, 85%)", // Light red for pulse
+		waveform: "hsl(217, 91%, 60%)",
+		aiAssistant: "hsl(251, 91%, 65%)", // Purple for AI
 	},
 	dark: {
-		background: "hsl(240, 10%, 3.90%)",
-		foreground: "hsl(0, 0%, 98%)",
-		card: "hsl(240, 10%, 3.90%)",
-		cardForeground: "hsl(0, 0%, 98%)",
-		popover: "hsl(240, 10%, 3.90%)",
-		popoverForeground: "hsl(0, 0%, 98%)",
-		primary: "hsl(0, 0%, 98%)",
-		primaryForeground: "hsl(240, 5.90%, 10%)",
-		secondary: "hsl(240, 3.70%, 15.90%)",
-		secondaryForeground: "hsl(0, 0%, 98%)",
-		muted: "hsl(240, 3.70%, 15.90%)",
-		mutedForeground: "hsl(240, 5%, 64.90%)",
-		accent: "hsl(240, 3.70%, 15.90%)",
-		accentForeground: "hsl(0, 0%, 98%)",
+		background: "hsl(0, 0%, 10%)", // Primary Dark #1a1a1a
+		foreground: "hsl(0, 0%, 100%)", // Primary Light #ffffff
+		card: "hsl(220, 13%, 7%)", // Background Dark #111827
+		cardForeground: "hsl(0, 0%, 100%)",
+		popover: "hsl(0, 0%, 10%)",
+		popoverForeground: "hsl(0, 0%, 100%)",
+		primary: "hsl(217, 91%, 60%)", // LYRIQ Blue #3b82f6
+		primaryForeground: "hsl(0, 0%, 100%)",
+		secondary: "hsl(220, 14%, 42%)", // LYRIQ Secondary #6b7280
+		secondaryForeground: "hsl(0, 0%, 100%)",
+		muted: "hsl(220, 13%, 15%)",
+		mutedForeground: "hsl(220, 14%, 42%)",
+		accent: "hsl(158, 64%, 52%)", // LYRIQ Green #10b981
+		accentForeground: "hsl(0, 0%, 100%)",
 		destructive: "hsl(0, 62.80%, 30.60%)",
 		destructiveForeground: "hsl(0, 85.70%, 97.30%)",
-		border: "hsl(240, 3.70%, 15.90%)",
-		input: "hsl(240, 3.70%, 15.90%)",
-		ring: "hsl(240, 4.90%, 83.90%)",
+		border: "hsl(220, 13%, 15%)",
+		input: "hsl(220, 13%, 15%)",
+		ring: "hsl(217, 91%, 60%)",
+		// LYRIQ-specific colors
+		lyricEditor: "hsl(0, 0%, 8%)",
+		recordingActive: "hsl(0, 100%, 50%)", // Recording red
+		recordingPulse: "hsl(0, 100%, 25%)", // Dark red for pulse
+		waveform: "hsl(217, 91%, 60%)",
+		aiAssistant: "hsl(251, 91%, 65%)", // Purple for AI
 	},
 };
