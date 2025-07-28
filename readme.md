@@ -1,5 +1,12 @@
 # LYRIQ 🎵
 
+[![GitHub Repository](https://img.shields.io/badge/GitHub-LYRIQ-blue?style=for-the-badge&logo=github)](https://github.com/APLUS17/LYRIQ)
+[![Version](https://img.shields.io/badge/Version-v1.0.0-green?style=for-the-badge)](https://github.com/APLUS17/LYRIQ/releases/tag/v1.0.0)
+[![React Native](https://img.shields.io/badge/React_Native-0.79.5-blue?style=for-the-badge&logo=react)](https://reactnative.dev/)
+[![Expo](https://img.shields.io/badge/Expo-~53.0.8-black?style=for-the-badge&logo=expo)](https://expo.dev/)
+
+**🔗 Repository:** https://github.com/APLUS17/LYRIQ
+
 *A minimalist, emotion-first songwriting companion for modern artists*
 
 ## Vision
