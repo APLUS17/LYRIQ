@@ -40,6 +40,12 @@ module.exports = {
 					DEFAULT: "hsl(var(--card))",
 					foreground: "hsl(var(--card-foreground))",
 				},
+				// LYRIQ-specific colors
+				recordingActive: "hsl(0, 100%, 50%)",
+				recordingPulse: "hsl(0, 100%, 85%)",
+				waveform: "hsl(var(--primary))",
+				aiAssistant: "hsl(251, 91%, 65%)",
+				lyricEditor: "hsl(var(--card))",
 			},
 		},
 	},

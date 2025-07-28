@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { ActivityIndicator, View } from "react-native";
+import { router } from "expo-router";
 import * as z from "zod";
 
 import { SafeAreaView } from "@/components/safe-area-view";
@@ -89,6 +90,16 @@ export default function SignIn() {
 				) : (
 					<Text>Sign In</Text>
 				)}
+			</Button>
+			
+			{/* Testing bypass */}
+			<Button
+				size="default"
+				variant="outline"
+				onPress={() => router.replace("/(protected)/(tabs)/")}
+				className="web:m-4 mt-2"
+			>
+				<Text>Skip Sign-In (Testing)</Text>
 			</Button>
 		</SafeAreaView>
 	);

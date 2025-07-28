@@ -85,40 +85,44 @@ export default function WriterScreen() {
 		<SafeAreaView className="flex-1 bg-background">
 			<View className="flex-1 relative">
 				{/* Song Header */}
-				<View className="flex-row items-center justify-between p-4 border-b border-border bg-card">
-					<View className="flex-1">
-						<Text className="text-lg font-semibold">{song.title}</Text>
-						<View className="flex-row items-center gap-2 mt-1">
+				<View className="bg-card border-b border-border shadow-sm">
+					<View className="px-6 py-4">
+						<View className="flex-row items-center justify-between mb-3">
+							<Text className="text-2xl font-bold text-foreground">{song.title}</Text>
+							
+							{/* MUSE Button */}
+							<Pressable
+								onPress={() => setShowAI(true)}
+								className="w-14 h-14 bg-aiAssistant rounded-full items-center justify-center active:scale-95 shadow-lg"
+							>
+								<Sparkles size={24} className="text-white" />
+							</Pressable>
+						</View>
+						
+						{/* Song Metadata */}
+						<View className="flex-row items-center flex-wrap gap-2">
 							{song.mood && (
-								<View className="bg-muted px-2 py-1 rounded">
-									<Text className="text-xs">{song.mood}</Text>
+								<View className="bg-primary/10 px-3 py-1.5 rounded-full border border-primary/20">
+									<Text className="text-xs font-medium text-primary">{song.mood}</Text>
 								</View>
 							)}
 							{song.genre && (
-								<View className="bg-muted px-2 py-1 rounded">
-									<Text className="text-xs">{song.genre}</Text>
+								<View className="bg-accent/10 px-3 py-1.5 rounded-full border border-accent/20">
+									<Text className="text-xs font-medium text-accent">{song.genre}</Text>
 								</View>
 							)}
 							{song.key && (
-								<View className="bg-muted px-2 py-1 rounded">
-									<Text className="text-xs">Key: {song.key}</Text>
+								<View className="bg-secondary/10 px-3 py-1.5 rounded-full border border-secondary/20">
+									<Text className="text-xs font-medium text-secondary">Key: {song.key}</Text>
 								</View>
 							)}
 							{song.tempo && (
-								<View className="bg-muted px-2 py-1 rounded">
-									<Text className="text-xs">{song.tempo} BPM</Text>
+								<View className="bg-muted px-3 py-1.5 rounded-full border border-border">
+									<Text className="text-xs font-medium text-muted-foreground">{song.tempo} BPM</Text>
 								</View>
 							)}
 						</View>
 					</View>
-
-					{/* MUSE Button */}
-					<Pressable
-						onPress={() => setShowAI(true)}
-						className="w-12 h-12 bg-aiAssistant rounded-full items-center justify-center active:scale-95"
-					>
-						<Sparkles size={20} className="text-white" />
-					</Pressable>
 				</View>
 
 				{/* Lyric Editor */}

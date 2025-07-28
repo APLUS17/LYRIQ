@@ -5,9 +5,52 @@ import * as aesjs from "aes-js";
 import * as SecureStore from "expo-secure-store";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { createClient } from "@supabase/supabase-js";
+import { ENV, isEnvConfigured, getEnvStatus } from "./env";
 
-const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL as string;
-const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY as string;
+const supabaseUrl = ENV.SUPABASE_URL;
+const supabaseAnonKey = ENV.SUPABASE_ANON_KEY;
+
+// Enhanced error handling for Supabase authentication
+const signInWithRetry = async (supabaseClient: any, credentials: any, maxRetries = 3) => {
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      const result = await supabaseClient.auth.signInWithPassword(credentials);
+      return result;
+    } catch (error) {
+      console.log(`Sign-in attempt ${attempt} failed:`, error);
+      
+      if (attempt === maxRetries) {
+        throw new Error(`Authentication failed after ${maxRetries} attempts`);
+      }
+      
+      // Wait before retrying (exponential backoff)
+      await new Promise(resolve => setTimeout(resolve, attempt * 1000));
+    }
+  }
+};
+
+// Check network connectivity before making requests
+const checkNetworkStatus = async () => {
+  try {
+    // Simple network check
+    const response = await fetch(supabaseUrl + "/rest/v1/", { 
+      method: "HEAD"
+    });
+    return response.ok;
+  } catch (error) {
+    console.error("Network check failed:", error);
+    return false;
+  }
+};
+
+// Validate Supabase configuration
+if (!isEnvConfigured()) {
+  console.warn("⚠️  Supabase environment variables not properly configured!");
+  console.warn("Please create a .env file with your Supabase credentials:");
+  console.warn("EXPO_PUBLIC_SUPABASE_URL=your_supabase_url_here");
+  console.warn("EXPO_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key_here");
+  console.warn("Current status:", getEnvStatus());
+}
 
 class LargeSecureStore {
 	private async _encrypt(key: string, value: string) {
@@ -52,6 +95,7 @@ class LargeSecureStore {
 	}
 }
 
+// Create Supabase client with better error handling
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
 	auth: {
 		storage: new LargeSecureStore(),
@@ -59,7 +103,21 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
 		persistSession: true,
 		detectSessionInUrl: false,
 	},
+	global: {
+		fetch: (url, options = {}) => {
+			return fetch(url, options).catch(error => {
+				console.error("Fetch error:", error);
+				throw error;
+			});
+		}
+	}
 });
+
+// Enhanced authentication methods with retry logic
+export const enhancedAuth = {
+	signInWithRetry: (credentials: any) => signInWithRetry(supabase, credentials),
+	checkNetworkStatus,
+};
 
 AppState.addEventListener("change", (state) => {
 	if (state === "active") {

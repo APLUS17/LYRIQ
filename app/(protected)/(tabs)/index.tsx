@@ -120,6 +120,16 @@ export default function ProjectsScreen() {
 
 	return (
 		<SafeAreaView className="flex-1 bg-background">
+			{/* Header */}
+			<View className="bg-card border-b border-border shadow-sm">
+				<View className="px-6 py-4">
+					<Text className="text-2xl font-bold text-foreground">🎵 My Projects</Text>
+					<Text className="text-sm text-muted-foreground mt-1">
+						Your songwriting workspace
+					</Text>
+				</View>
+			</View>
+			
 			<ProjectManager
 				projects={projects}
 				onProjectSelect={handleProjectSelect}
@@ -127,7 +137,7 @@ export default function ProjectsScreen() {
 				onProjectCreate={handleProjectCreate}
 				onProjectUpdate={handleProjectUpdate}
 				onProjectDelete={handleProjectDelete}
-				onSongCreate={handleSongCreate}
+			onSongCreate={handleSongCreate}
 			/>
 		</SafeAreaView>
 	);

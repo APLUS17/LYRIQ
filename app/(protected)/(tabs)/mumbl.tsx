@@ -83,11 +83,13 @@ export default function MumblScreen() {
 		<SafeAreaView className="flex-1 bg-background">
 			<ScrollView className="flex-1" showsVerticalScrollIndicator={false}>
 				{/* Header */}
-				<View className="p-4 border-b border-border">
-					<Text className="text-lg font-semibold mb-2">🎤 MUMBL</Text>
-					<Text className="text-sm text-mutedForeground">
-						Capture your voice memos and musical ideas instantly
-					</Text>
+				<View className="bg-card border-b border-border shadow-sm">
+					<View className="px-6 py-4">
+						<Text className="text-2xl font-bold text-foreground mb-2">🎤 MUMBL</Text>
+						<Text className="text-sm text-muted-foreground">
+							Capture your voice memos and musical ideas instantly
+						</Text>
+					</View>
 				</View>
 
 				{/* Voice Recorder */}

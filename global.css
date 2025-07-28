@@ -3,47 +3,49 @@
 @tailwind utilities;
 
 @layer base {
+	/* LYRIQ Light Mode Colors */
 	:root {
-		--background: 0 0% 100%;
-		--foreground: 0 0% 14.50%;
-		--card: 0 0% 100%;
-		--card-foreground: 0 0% 14.50%;
-		--popover: 0 0% 100%;
-		--popover-foreground: 0 0% 14.50%;
-		--primary: 0 0% 20.50%;
-		--primary-foreground: 0 0% 98.50%;
-		--secondary: 0 0% 97%;
-		--secondary-foreground: 0 0% 20.50%;
-		--muted: 0 0% 97%;
-		--muted-foreground: 0 0% 55.60%;
-		--accent: 0 0% 97%;
-		--accent-foreground: 0 0% 20.50%;
-		--destructive: 0 80% 57.70%;
-		--destructive-foreground: 0 0% 100%;
-		--border: 0 0% 92.20%;
-		--input: 0 0% 92.20%;
-		--ring: 0 0% 70.80%;
+		--background: 0 0% 100%;           /* White background */
+		--foreground: 0 0% 10%;            /* Dark text */
+		--card: 0 0% 98%;                  /* Light card */
+		--card-foreground: 0 0% 10%;       /* Dark text on cards */
+		--popover: 0 0% 100%;              /* White popover */
+		--popover-foreground: 0 0% 10%;    /* Dark text on popover */
+		--primary: 217 91% 60%;            /* LYRIQ Blue */
+		--primary-foreground: 0 0% 100%;   /* White text on blue */
+		--secondary: 220 14% 42%;          /* LYRIQ Gray */
+		--secondary-foreground: 0 0% 100%; /* White text on gray */
+		--muted: 220 13% 97%;              /* Light muted background */
+		--muted-foreground: 220 14% 42%;   /* Muted text */
+		--accent: 158 64% 52%;             /* LYRIQ Green */
+		--accent-foreground: 0 0% 100%;    /* White text on green */
+		--destructive: 0 80% 57.70%;       /* Red for errors */
+		--destructive-foreground: 0 0% 100%; /* White text on red */
+		--border: 0 0% 92.20%;             /* Light border */
+		--input: 0 0% 92.20%;              /* Light input border */
+		--ring: 217 91% 60%;               /* Focus ring (LYRIQ Blue) */
 	}
 
-	.dark:root {
-		--background: 240 10% 3.90%;
-		--foreground: 0 0% 98%;
-		--card: 240 10% 3.90%;
-		--card-foreground: 0 0% 98%;
-		--popover: 240 10% 3.90%;
-		--popover-foreground: 0 0% 98%;
-		--primary: 0 0% 98%;
-		--primary-foreground: 240 5.90% 10%;
-		--secondary: 240 3.70% 15.90%;
-		--secondary-foreground: 0 0% 98%;
-		--muted: 240 3.70% 15.90%;
-		--muted-foreground: 240 5% 64.90%;
-		--accent: 240 3.70% 15.90%;
-		--accent-foreground: 0 0% 98%;
-		--destructive: 0 62.80% 30.60%;
-		--destructive-foreground: 0 85.70% 97.30%;
-		--border: 240 3.70% 15.90%;
-		--input: 240 3.70% 15.90%;
-		--ring: 240 4.90% 83.90%;
+	/* LYRIQ Dark Mode Colors */
+	.dark {
+		--background: 0 0% 10%;            /* Dark background */
+		--foreground: 0 0% 95%;            /* Light text (high contrast) */
+		--card: 220 13% 7%;                /* Dark card */
+		--card-foreground: 0 0% 95%;       /* Light text on cards */
+		--popover: 0 0% 10%;               /* Dark popover */
+		--popover-foreground: 0 0% 95%;    /* Light text on popover */
+		--primary: 217 91% 60%;            /* LYRIQ Blue (same) */
+		--primary-foreground: 0 0% 100%;   /* White text on blue */
+		--secondary: 220 14% 42%;          /* LYRIQ Gray (same) */
+		--secondary-foreground: 0 0% 100%; /* White text on gray */
+		--muted: 220 13% 15%;              /* Dark muted background */
+		--muted-foreground: 220 14% 65%;   /* Lighter muted text for readability */
+		--accent: 158 64% 52%;             /* LYRIQ Green (same) */
+		--accent-foreground: 0 0% 100%;    /* White text on green */
+		--destructive: 0 62.80% 30.60%;    /* Darker red for dark mode */
+		--destructive-foreground: 0 85.70% 97.30%; /* Light text on red */
+		--border: 220 13% 20%;             /* Lighter border for dark mode */
+		--input: 220 13% 20%;              /* Lighter input border */
+		--ring: 217 91% 60%;               /* Focus ring (LYRIQ Blue) */
 	}
 }
